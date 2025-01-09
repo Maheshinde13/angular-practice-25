@@ -1,0 +1,25 @@
+.transfer-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-container {
+  width: 30%;
+}
+
+.list-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-container li {
+  margin: 5px 0;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}

@@ -1,0 +1,17 @@
+<!-- Tic-tac-toe is a game for two players who take turns making space in a three-by-three grid with X or O. The player who succeeds in playing three of their marks in a horizontal, vertical, or diagonal row is the winner. -->
+
+<div class="tic-tac-toe">
+  <h1>Tic-Tac-Toe</h1>
+  <div class="board">
+    <div
+      *ngFor="let cell of board; index as i"
+      class="cell"
+      [class.disabled]="cell || winner"
+      (click)="playMove(i)"
+    >
+      {{ cell }}
+    </div>
+  </div>
+  <div *ngIf="winner" class="winner">🎉 Player {{ winner }} wins!</div>
+  <button class="reset-button" (click)="resetGame()">Reset Game</button>
+</div>

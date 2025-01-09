@@ -1,0 +1,49 @@
+.dice-roller {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.input-container {
+  margin: 20px 0;
+}
+
+input {
+  width: 50px;
+  padding: 5px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+button {
+  font-size: 1rem;
+  padding: 5px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.dice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+}
+
+.dice {
+  font-size: 1.5rem;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}

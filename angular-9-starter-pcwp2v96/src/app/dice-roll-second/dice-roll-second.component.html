@@ -1,0 +1,29 @@
+<div class="dice-roller">
+  <h1>Dice Roller with count dice</h1>
+  <div class="input-container">
+    <label for="numberOfDice">Number of Dice:</label>
+    <input
+      type="number"
+      id="numberOfDice"
+      [(ngModel)]="numberOfDice"
+      min="1"
+      max="12"
+    />
+    <button (click)="rollDice()">Roll</button>
+  </div>
+
+  <div class="results" *ngIf="diceResults.length > 0">
+    <h2>Results:</h2>
+    <div class="dice-grid">
+      <div *ngFor="let result of diceResults" class="dice">🎲 {{ result }}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Build a dice roller app that simulates the results of rolling a specified number of 6-sided dice.
+
+Requirements
+The user can specify the number of dice to roll using the input field and the value can be an integer between 1 to 12 inclusive.
+Upon clicking the "Roll" button, the dice roll is simulated and the results are displayed.
+The results of the dice roll should be displayed in rows of three.
+The example below shows a potential result of rolling 6 dice. -->

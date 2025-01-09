@@ -1,0 +1,5 @@
+<div class="dice-roller">
+  <h1>Dice Roller</h1>
+  <button (click)="rollDice()">Roll Dice</button>
+  <div *ngIf="diceValue !== null" class="dice">🎲 {{ diceValue }}</div>
+</div>

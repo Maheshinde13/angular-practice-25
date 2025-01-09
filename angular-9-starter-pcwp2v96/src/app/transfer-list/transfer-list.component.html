@@ -1,0 +1,80 @@
+<p>transfer-list works!</p>
+
+<div class="transfer-list">
+  <!-- List A -->
+  <div class="list-container">
+    <h3>List A</h3>
+    <ul>
+      <li *ngFor="let item of listA">
+        <label>
+          <input type="checkbox" [(ngModel)]="item.selected" />
+          {{ item.name }}
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Transfer Buttons -->
+  <div class="buttons-container">
+    <button
+      [disabled]="isTransferSelectedDisabled(listA)"
+      (click)="transferSelected(listA, listB)"
+    >
+      &gt;
+      <!-- Single arrow -->
+    </button>
+    <button
+      [disabled]="isTransferSelectedDisabled(listB)"
+      (click)="transferSelected(listB, listA)"
+    >
+      &lt;
+      <!-- Single arrow -->
+    </button>
+    <button
+      [disabled]="isTransferAllDisabled(listA)"
+      (click)="transferAll(listA, listB)"
+    >
+      &gt;&gt;
+      <!-- Double arrow -->
+    </button>
+    <button
+      [disabled]="isTransferAllDisabled(listB)"
+      (click)="transferAll(listB, listA)"
+    >
+      &lt;&lt;
+      <!-- Double arrow -->
+    </button>
+  </div>
+
+  <!-- List B -->
+  <div class="list-container">
+    <h3>List B</h3>
+    <ul>
+      <li *ngFor="let item of listB">
+        <label>
+          <input type="checkbox" [(ngModel)]="item.selected" />
+          {{ item.name }}
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- 
+Features
+Two Lists:
+
+List A and List B, each starting with 4 items.
+Items can be selected using checkboxes.
+Transferring:
+
+Single Arrow Buttons:
+Transfer selected items from one list to another.
+Double Arrow Buttons:
+Transfer all items from one list to another.
+State Preservation:
+
+Items retain their selected (checked) states after being transferred.
+Button Disabling:
+
+Buttons are disabled if there are no items to transfer. -->
